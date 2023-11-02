@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>West Wind Healthcare | Sign In | SignOut</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+
+    <div class="container2 my-5 mx-auto" id="container">
+        <div class="form-container sign-up-container">
+          <form class="mx-auto" action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="www.facebook.com" class="social"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="www.gmail.com" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="www.linkedin.com" class="social"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+          </form>
+        </div>
+  
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="www.facebook.com" class="social"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="www.gmail.com" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="www.linkedin.com" class="soc ial"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+          </form>
+        </div>
+  
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us.</p>
+              <button class="ghost" id="signUp">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
